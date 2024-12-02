@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt_broker
+    ports:
+      - "2XXX2:1883" 
+    volumes:
+      - ./mosquitto_config:/mosquitto/config
+      - ./mosquitto_data:/mosquitto/data
+
